@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicios JavaScript</title>
+</head>
+<body>
+  <script>
+    // Ejercicio 1
+
+    document.writeln("----- Ejercicio 1 ----- <br>");
+
+    let im = "I'm = I am";
+    let youre = "You're = You are";
+    document.writeln(im + "<br>");
+    document.writeln(youre + "<br>");
+
+    // Ejercicio 2
+
+    document.writeln("<br> ----- Ejercicio 2 ----- <br>");
+
+    let userInput = prompt("Introduce un número:");
+    if (!isNaN(userInput)) {
+      document.writeln("Es un número. <br>");
+    } else {
+      document.writeln("No es un número. <br>");
+    }
+
+    // Ejercicio 3
+
+    document.writeln("<br> ----- Ejercicio 3 ----- <br>");
+
+    let num1 = parseFloat(prompt("Introduce el primer número:"));
+    let num2 = parseFloat(prompt("Introduce el segundo número:"));
+
+    if (num1 > num2) {
+      document.writeln("El mayor es: " + num1 + " y el menor es: " + num2 + "<br>");
+    } else if (num1 < num2) {
+      document.writeln("El mayor es: " + num2 + " y el menor es: " + num1 + "<br>");
+    } else {
+      document.writeln("Los números son iguales. <br>");
+    }
+
+    // Ejercicio 4
+
+    document.writeln("<br> ----- Ejercicio 4 ----- <br>");
+
+    let num = parseFloat(prompt("Introduce un número:"));
+    if (isNaN(num)) {
+      document.writeln("No es un número válido. <br>");
+    } else {
+      if (num % 2 === 0) {
+        document.writeln("El número es par. <br>");
+      } else {
+        document.writeln("El número es impar. <br>");
+      }
+    }
+
+    // Ejercicio 5
+
+    document.writeln("<br> ----- Ejercicio 5 ----- <br>");
+
+    let height = parseFloat(prompt("Introduce tu altura en metros (por ejemplo, 1.75):"));
+    let weight = parseFloat(prompt("Introduce tu peso en kilogramos:"));
+
+    let bmi = weight / (height * height);
+
+    document.writeln("Tu índice de masa corporal (IMC) es: " + bmi.toFixed(2) + "<br>" );
+
+    // Ejercicio 6
+
+    document.writeln("<br> ----- Ejercicio 6 ----- <br>");
+
+    let nota = parseFloat(prompt("Introduce tu nota:"));
+
+    if (nota < 5) {
+      document.writeln("Calificación: Insuficiente");
+    } else if (nota < 6) {
+      document.writeln("Calificación: Suficiente");
+    } else if (nota < 7) {
+      document.writeln("Calificación: Bé");
+    } else if (nota < 9) {
+      document.writeln("Calificación: Notable");
+    } else {
+      document.writeln("Calificación: Excel·lent");
+    }
+
+    // Ejercicio 7
+
+    document.writeln("<br> ----- Ejercicio 7 ----- <br>");
+
+    let countDownNum = parseInt(prompt("Introduce un valor numérico para el conteo atrás:"));
+    while (countDownNum > 0) {
+      document.writeln("Cuenta atrás: " + countDownNum + "<br>") ;
+      countDownNum--;
+    }
+    document.writeln("¡Cuenta atrás finalizada! <br>");
+
+    // Ejercicio 8
+
+    document.writeln("<br> ----- Ejercicio 8 ----- <br>");
+
+    let countDownNumFor = parseInt(prompt("Introduce un valor numérico para el conteo atrás con for:"));
+    for (let i = countDownNumFor; i > 0; i--) {
+      document.writeln("Cuenta atrás: " + i + "<br>");
+    }
+    document.writeln("¡Cuenta atrás finalizada! <br>");
+
+    // Ejercicio 9
+
+    document.writeln("<br> ----- Ejercicio 9 ----- <br>");
+
+    size = parseInt(prompt("Introduce el tamaño del cuadrado:"));
+
+    for (i = 0; i < size; i++) {
+      for (j = 0; j < size; j++) {
+        document.writeln("*");
+      }
+      document.writeln("<br>");
+    }
+
+    // Ejercicio 10
+
+    document.writeln("<br> ----- Ejercicio 10 ----- <br>");
+
+    let multiplicationNum = parseInt(prompt("Introduce un número para mostrar su tabla de multiplicar:"));
+
+    document.writeln("Tabla de multiplicar del " + multiplicationNum + "<br>");
+    for (let i = 1; i <= 10; i++) {
+      document.writeln(multiplicationNum + " x " + i + " = " + (multiplicationNum * i) + "<br>");
+    }
+
+
+    document.writeln("<br><br>-------- FIN --------<br>");
+
+  </script>
+</body>
+</html>
