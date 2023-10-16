@@ -1,25 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block 2</title>
-</head>
-<body>
-
     <script>
+
+        function Inicio() {
+            location.href = "block-2.html";
+        }
         // Ejercicio 1
 
-        var precioCarne = 23;
-        var precioPescado = 15;
-        var precioPOstre = 3;
-        var propina = 0.06;
+        function Ejercicio1() {
+            let preuDinarCarn = 23;
+            let preuDinarPeix = 15;
+            let preuPostre = 3;
 
-        var choice = prompt("Pulsa 1 si quieres comer Carne\nPulsa 2 si quieres comer Pescado", "1");
+            let propina = 0.06;
 
-        var precio;
+            let dinar = prompt("Si vol dinar carn, escriu 1. Si vol dinar peix, escriu 2.", 1);
+
+            let preuDinar;
+            if (dinar == 1) {
+                preuDinar = preuDinarCarn;
+            } else if (dinar == 2) {
+                preuDinar = preuDinarPeix;
+            }
+
+            let volPostre = confirm("Vols postre?");
+
+            if (volPostre) {
+                preuDinar += preuPostre;
+            }
+
+            preuDinar += preuDinar * propina;
+
+            document.writeln("El preu del dinar és: " + preuDinar + " € <br><br>");
+
+            document.writeln("<input type='button' value='Pagina inicio' onClick='Inicio();'>");
+
+
+        }
+
+
+        // Ejercicio 2
+
+        function Ejercicio2() {
+
+            let ratoli = 29;
+            let gat = 0;
+            let dauRatol = 0;
+            let dauGat = 0;
+
+            while (ratoli != gat) {
+                dauRatol = Math.floor(Math.random() * 6) + 1;
+                ratoli = (ratoli + dauRatol) % 60;
+                document.writeln("Ratolí: He tret un " + dauRatol + ". Vaig a la casella " + ratoli + ".<br>");
+
+                if (ratoli == gat) {
+                    document.writeln("Ratolí: Guanya! <br><br>");
+                    break;
+                }
+
+                dauGat = Math.floor(Math.random() * 6) + 1;
+                gat = (gat - 2 * dauGat + 60) % 60;
+                document.writeln("Gat: He tret un " + dauGat + ". Vaig a la casella " + gat + ".<br>");
+
+                if (ratoli == gat) {
+                    document.writeln("Gat: Guanya!<br><br>");
+                    break;
+                }
+            }
+
+            document.writeln("<input type='button' value='Pagina inicio' onClick='Inicio();'>");
+
+        }
+
+        function Ejercicio3() {
+
+        }
 
     </script>
-    
+</head>
+<body>
+	<br><br>
+	<input type="button" value="Ejercicio 1" onClick="Ejercicio1();"><br><br>
+	<input type="button" value="Ejercicio 2" onClick="Ejercicio2();"><br><br>
+	<input type="button" value="Ejercicio 3" onClick="Ejercicio3();"><br><br>
 </body>
 </html>
