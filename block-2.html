@@ -73,7 +73,21 @@
 
         }
 
+        // Ejercicio3
+
         function Ejercicio3() {
+
+                    function reverseFrase(frase) {
+        let fraseInvertidaLletra = frase.split('').reverse().join('');
+        let fraseInvertidaParaula = frase.split(' ').reverse().join(' ');
+        document.writeln("Frase original:" + frase + "<br><br>");
+        document.writeln("Frase invertida a nivell de lletra: " + fraseInvertidaLletra + "<br><br>");
+        document.writeln("Frase invertida a nivell de paraula: " + fraseInvertidaParaula + "<br><br>");
+        }
+
+        let frase = "Hola em dic";
+        reverseFrase(frase);
+
 
         }
 
